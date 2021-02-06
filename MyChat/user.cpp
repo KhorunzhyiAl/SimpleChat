@@ -5,7 +5,7 @@ User::User()
     m_username = "user" + QString::number(qrand() % 1000);
     connect(&mySocket, &QTcpSocket::readyRead, this, &User::onReadyRead);
 
-    // change the host address to what the one server app prints
+    // change the host address to the one server app prints
     mySocket.connectToHost("127.0.0.1", 5050);
 }
 
